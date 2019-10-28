@@ -1,0 +1,224 @@
+.bg {
+    display: none;
+    position: fixed;
+    background-color:rgba(0,0,0,0.8);
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+.loginP {
+    z-index: 3;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    height: 360px;
+    border-radius: 2px;
+    background-color: #fff;
+    .close {
+        position: absolute;
+
+        right: 10px;
+        top: 10px;
+        img {
+            width: 20px;
+            height: 20px;
+        }
+    }
+    .introduce {
+        font-size: 20px;
+        font-weight: 700;
+        text-align: center;
+        margin-top: 20px;
+        line-height: 20px;
+    }
+    ul {
+        margin-top: 30px;
+        #checkV {
+            display: none;
+        }
+        li {
+            
+            width: 70%;
+            height: 42px;
+            margin-left: 15%;
+            input{
+                width: 100%;
+                height: 100%;
+                text-indent: 10px;
+                background-color: #fff;
+                border-radius: 4px;
+                border: 1px solid #ccc;
+            }
+            
+            .check {
+                border: 1px solid #ddd;
+                background-color: rgb(232, 232, 232);
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                line-height: 38px;
+                color: #9c9c9c;
+                height: 40px;
+                font-size: 14px;
+                cursor: pointer;
+                -moz-user-select: none; /*火狐*/
+                -webkit-user-select: none; /*webkit浏览器*/
+                -ms-user-select: none; /*IE10*/
+                -khtml-user-select: none; /*早期浏览器*/
+                user-select: none;
+                .box {
+                    position: relative;
+                    float: left;
+                    width: 40px;
+                    height: 40px;
+                    cursor: move;
+                    background: url(../images/index/box.jpg) no-repeat;
+                }
+                .text {
+                    // width: 170px;
+                    // margin: 0 auto;
+                    display: flex;
+                    justify-content: center;
+                    div {
+                        // float: left;
+                    }
+                }
+                // .box {
+                    // border: 1px solid #ddd;
+                    // background-color: #FFF;
+                    // font-size: 20px;
+                    // width: 38px;
+                    // color: #737383;
+                    // font-stretch: wider;
+                    // box-sizing: border-box;
+                    // height: 40px;
+                    // float: left;
+                // }
+                
+            }
+            button {
+                width: 100%;
+                height: 100%;
+                border: 0;
+			    border-radius: 4px;
+                background-color: #489ac8;
+                color: white;
+                font-size: 16px;
+            }
+            
+            margin-top: 20px;
+        }
+    }
+}
+header {
+    
+    color: white;
+    nav {
+        height: 40px;
+        background-color: #102039;
+        line-height: 40px;
+        .logo {
+            float: left;
+            margin-left: 40px;
+            font-size: 20px;
+        }
+        ul {
+            li {
+                float: left;
+                margin-right: 40px;
+                &:hover {
+                    color: #489ac8;
+                    cursor: pointer;
+                }
+            }
+            
+        }
+    }
+    .banner {
+        width: 100%;
+    height: 600px;
+    background: url(../images/index/banner.jpg) no-repeat;
+    background-size: 100% 100%;
+    }
+    
+}
+footer {
+    
+    .top {
+        display: flex;
+        padding-bottom: 40px;
+        .text {
+            flex: 7;
+            ul {
+                float: left;
+                margin-left: 50px;
+                width: 100px;
+                font-size: 14px;
+                .title {
+                    color: white;
+                }
+                li {
+                    margin-top: 10px;
+                    color: gray;
+                }
+            }
+        }
+        .img {
+            flex: 3;
+            .wechat {
+                cursor: pointer;
+                position: relative;
+                img {
+                    
+                    width: 54px;
+                    height: 53px;
+                }
+                
+                .mywechat {
+                    
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    margin-top: -20px;
+                    margin-left: -140px;
+                    display: none;
+                    width: 120px;
+                    height: 180px;
+                    background-color: #fff;
+                    img {
+                        display: block;
+                        width: 120px;
+                        height: 120px;
+                    }
+                    div {
+                        color: black;
+                        text-align: center;
+                        margin-left: 10px;
+                        margin-right: 10px;
+                    }
+                    .triangle {
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        margin-right: -20px;
+                        margin-top: 40px;
+                        border-width: 10px;
+                        border-style: solid;
+                        border-color: transparent transparent transparent #fff;
+                    }
+                }
+            }
+        }
+    }
+    .buttom {
+        background-color: #0d182a;
+        height: 76px;
+        line-height: 76px;
+    }
+    color: white;
+    background-color: #293a55;
+    
+}

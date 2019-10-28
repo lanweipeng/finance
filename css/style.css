@@ -1,0 +1,197 @@
+.bg {
+  display: none;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+.loginP {
+  z-index: 3;
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 360px;
+  border-radius: 2px;
+  background-color: #fff;
+}
+.loginP .close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.loginP .close img {
+  width: 20px;
+  height: 20px;
+}
+.loginP .introduce {
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 20px;
+  line-height: 20px;
+}
+.loginP ul {
+  margin-top: 30px;
+}
+.loginP ul #checkV {
+  display: none;
+}
+.loginP ul li {
+  width: 70%;
+  height: 42px;
+  margin-left: 15%;
+  margin-top: 20px;
+}
+.loginP ul li input {
+  width: 100%;
+  height: 100%;
+  text-indent: 10px;
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+.loginP ul li .check {
+  border: 1px solid #ddd;
+  background-color: #e8e8e8;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 38px;
+  color: #9c9c9c;
+  height: 40px;
+  font-size: 14px;
+  cursor: pointer;
+  -moz-user-select: none;
+  /*火狐*/
+  -webkit-user-select: none;
+  /*webkit浏览器*/
+  -ms-user-select: none;
+  /*IE10*/
+  -khtml-user-select: none;
+  /*早期浏览器*/
+  user-select: none;
+}
+.loginP ul li .check .box {
+  position: relative;
+  float: left;
+  width: 40px;
+  height: 40px;
+  cursor: move;
+  background: url(../images/index/box.jpg) no-repeat;
+}
+.loginP ul li .check .text {
+  display: flex;
+  justify-content: center;
+}
+.loginP ul li button {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 4px;
+  background-color: #489ac8;
+  color: white;
+  font-size: 16px;
+}
+header {
+  color: white;
+}
+header nav {
+  height: 40px;
+  background-color: #102039;
+  line-height: 40px;
+}
+header nav .logo {
+  float: left;
+  margin-left: 40px;
+  font-size: 20px;
+}
+header nav ul li {
+  float: left;
+  margin-right: 40px;
+}
+header nav ul li:hover {
+  color: #489ac8;
+  cursor: pointer;
+}
+header .banner {
+  width: 100%;
+  height: 600px;
+  background: url(../images/index/banner.jpg) no-repeat;
+  background-size: 100% 100%;
+}
+footer {
+  color: white;
+  background-color: #293a55;
+}
+footer .top {
+  display: flex;
+  padding-bottom: 40px;
+}
+footer .top .text {
+  flex: 7;
+}
+footer .top .text ul {
+  float: left;
+  margin-left: 50px;
+  width: 100px;
+  font-size: 14px;
+}
+footer .top .text ul .title {
+  color: white;
+}
+footer .top .text ul li {
+  margin-top: 10px;
+  color: gray;
+}
+footer .top .img {
+  flex: 3;
+}
+footer .top .img .wechat {
+  cursor: pointer;
+  position: relative;
+}
+footer .top .img .wechat img {
+  width: 54px;
+  height: 53px;
+}
+footer .top .img .wechat .mywechat {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-top: -20px;
+  margin-left: -140px;
+  display: none;
+  width: 120px;
+  height: 180px;
+  background-color: #fff;
+}
+footer .top .img .wechat .mywechat img {
+  display: block;
+  width: 120px;
+  height: 120px;
+}
+footer .top .img .wechat .mywechat div {
+  color: black;
+  text-align: center;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+footer .top .img .wechat .mywechat .triangle {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-right: -20px;
+  margin-top: 40px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent transparent #fff;
+}
+footer .buttom {
+  background-color: #0d182a;
+  height: 76px;
+  line-height: 76px;
+}

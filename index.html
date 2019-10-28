@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/app.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="bg" id='bg'></div>
+    <div class="loginP" id='loginP'>
+        <div class="close cp" id = 'close'><img src="./images/index/delete.jpg" alt=""></div>
+        <div class="introduce" id="introduce">登陆</div>
+        <ul>
+            <form action="" onsubmit="return checkForm()">
+                <li><input type="text" required name="uname" id="uname" placeholder="用户名"></li>
+                <li><input type="password" required name="password" id="" placeholder="密码"></li>
+                <input type="text" name="checkV" id="checkV" value="" >
+                <li><div class="check" id="check"><div class="green"></div><div class="box" id="box"></div>
+                    <div class="text" id='text'>
+                        <div>请</div>
+                        <div>按</div>
+                        <div>住</div>
+                        <div>滑</div>
+                        <div>块</div>
+                        <div>，</div>
+                        <div>拖</div>
+                        <div>动</div>
+                        <div>到</div>
+                        <div>最</div>
+                        <div>右</div>
+                        <div>边</div>
+                    </div>
+                </div></li>
+                <li><button type="submit" class="cp" id="cp">登陆</button></li>
+            </form>
+        </ul>
+    </div>
+    <header>
+        <nav>
+            <div class="logo">XX科技</div>
+            <ul class="fr">
+                <li id="login">登陆</li>
+            </ul>
+        </nav>
+        <div class="banner"></div>
+    </header>
+    <main></main>
+    <footer>
+        <div class="top">
+                <div class="text">
+                        
+                            <ul>
+                                <li class="title">关于XX</li>
+                                <li>XX合伙人</li>
+                                <li>核心价值观</li>
+                                <li>联系我们</li>
+                            </ul>
+                            <ul>
+                                <li class="title">业务介绍</li>
+                                <li>资产管理</li>
+                                <li>采购入库</li>
+                                <li>财务入账</li>
+                                <li>资产卡片</li>
+                                <li>资产列表</li>
+                                <li>资产领用</li>
+                                <li>资产归还</li>
+                                <li>资产调拨</li>
+                                <li>系统配置</li>
+                                <li>人员管理</li>
+                            </ul>
+                    </div>
+                    <div class="img">
+                        <div class="wechat" id='wechat'>
+                            <div class="mywechat" id='myWechat'>
+                                <img src="./images/index/myWechat.jpg" alt="">
+                                <div>扫描二维码，添加沈先生的微信号</div>
+                                <div class="triangle"></div>
+                            </div>
+                            <img src="./images/index/wechat.png" alt="微信">
+                        </div>
+                    </div>
+        </div>
+        
+        <div class="buttom c">
+            联系电话：13067713137（沈先生） 团队地址：C3-409 联系邮箱：274587193@qq.com
+        </div>
+
+    </footer>
+    <script src="./js/jquery-1.12.2.min.js"></script>
+    <script>
+        var wechat = document.getElementById('wechat');
+        $('#wechat').mouseover(function(){
+            $('#myWechat').css("display","block")
+        }).mouseout(function(){
+            $('#myWechat').css("display","none")
+        })
+        //点击登陆
+        $('#login').click(function(){
+            $('#loginP').css("display","block");
+            $('#bg').css("display","block");
+        })
+        //点击关闭
+        $("#close").click(function(){
+            $('#loginP').css("display","none");
+            $('#bg').css("display","none");
+        })
+        //验证移动滑块
+        var box = document.getElementById('box');
+        var cha;
+        box.onmousedown = function(e){
+            var check = document.getElementById('check');
+            var x = e.pageX || (e.clientX + scrollX) - check.offsetLeft;
+            document.onmousemove = function(e){
+                e = e || window.event;
+                var boxX = e.pageX || (e.clientX + scrollX) - x;
+                cha = boxX - x;
+                if(cha<0)
+                {
+                    cha = 0;
+                    
+                }else if(cha>240){
+                    cha = 240;
+                }
+                
+                $('#box').css({"cursor":"move","left":""+cha+"px"});
+                
+            }
+            
+        }
+        document.onmouseup = function(){
+            $('#checkV').val(cha);
+            if(cha == 240){
+                $('#text').html('验证成功').css({"textIndent":"-40px"})
+                box.onmousedown = null;
+                $('#cp').disabled = true;
+               
+            }
+            document.onmousemove = null;
+            
+        }
+        function checkForm() {
+            var checkV = document.getElementById('checkV');
+            console.log(checkV)
+            cha = checkV.value
+            if(cha < 240) {
+                $('#introduce').html('为了你的账户安全，请拖动滑块完成验证').css({"fontSize":"12px","fontWeight":"400","color":"red"})
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
